@@ -1,0 +1,50 @@
+_schema-version: "3.2"
+ID: PortalDeAtencionAClientes_DEV_V5
+version: 0.0.1
+modules:
+- name: portaldeatencionaclientes-dev-v5-approuter
+  type: approuter.nodejs
+  path: portaldeatencionaclientes-dev-v5-approuter
+  requires:
+  - name: PortalDeAtencionAClientes_DEV_V5_html_repo_runtime
+  parameters:
+    disk-quota: 256M
+    memory: 256M
+- name: PortalDeAtencionAClientes_DEV_V5_ui_deployer
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: PortalDeAtencionAClientes_DEV_V5_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - HTML5Module-content.zip
+      name: HTML5Module
+      target-path: resources/
+- name: HTML5Module
+  type: html5
+  path: HTML5Module
+  build-parameters:
+    builder: custom
+    commands:
+    - npm run build
+    supported-platforms: []
+resources:
+- name: PortalDeAtencionAClientes_DEV_V5_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+- name: PortalDeAtencionAClientes_DEV_V5_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    - npm install

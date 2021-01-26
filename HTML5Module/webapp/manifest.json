@@ -1,0 +1,137 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "namespace.HTML5Module",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	},
+	
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "namespace.HTML5Module.view.Vista_Principal",
+			"type": "XML",
+			"async": true,
+			"id": "Vista_Principal"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.1",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "namespace.HTML5Module.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "namespace.HTML5Module.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "Vista_Principal",
+					"pattern": "Vista_Principal",
+					"titleTarget": "Vista_Principal",
+					"greedy": false,
+					"target": [
+						"Vista_Principal"
+					]
+				},
+				{
+					"name": "Vista_M_Principal",
+					"pattern": "Vista_M_Principal",
+					"titleTarget": "Vista_M_Principal",
+					"greedy": false,
+					"target": [
+						"Vista_M_Principal"
+					]
+				},
+				{
+					"name": "Vista_DT_Principal",
+					"pattern": "Vista_DT_Principal",
+					"titleTarget": "Vista_DT_Principal",
+					"greedy": false,
+					"target": [
+						"Vista_DT_Principal"
+                    ]
+                },
+                {
+                    "name": "Vista_DT_Cita",
+                    "pattern": "Vista_DT_Cita",
+                    "titleTarget": "Vista_DT_Cita",
+                    "greedy": false,
+                    "target": ["Vista_DT_Cita"]
+                }],
+			"targets": {
+				"Vista_M_Principal": {
+					"viewType": "XML",
+					"viewName": "Vista_M_Principal"
+				},
+				"Vista_DT_Principal": {
+					"viewType": "XML",
+					"viewName": "Vista_DT_Principal"
+				},
+				"Vista_Principal": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Vista_Principal"
+                },	
+               	"Vista_DT_Cita": {
+					"viewType": "XML",
+					"viewName": "Vista_DT_Cita"
+				}
+			}
+		}
+	}
+}

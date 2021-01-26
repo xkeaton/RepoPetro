@@ -1,0 +1,725 @@
+/* Enter your custom styles here */
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.watermark {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    color: BLACK;
+}
+
+/*.styleCabeceraRojo.sapMIBar.sapMHeader-CTX {
+    color: #32363a;
+    background-color: #EE3524;
+    filter: none;
+    background-image: none;
+}*/
+
+.sapMWizard.sapMWizardBgStandard .sapMWizardStepContainer {
+    background-color: #fff;
+}
+
+.GridDataSample .exampleDiv {
+    height: 7rem;
+    width: 100%;
+    background-color: #A9EAFF;
+}
+
+.styleCabeceraRojo.sapMBar {
+    color: #32363a;
+    background-color: #EE3524;
+    filter: none;
+    background-image: none;
+}
+
+/*.sapMTB {
+    height: 6.75rem;
+    padding: 0 0.5rem 0 0.25rem;
+    background: transparent;
+}*/
+
+/*.styleCabeceraBlanco.sapMTB {
+    height: 5.75rem;
+    padding: 0 0.5rem 0 0;
+    background: #FFF;
+}*/
+
+.styleCabeceraBlanco {
+    padding: 0 0.5rem;
+    background-color: #fff;
+}
+
+.styleCabeceraVerde.sapMTB {
+    height: 1rem;
+    padding: 0 0.5rem 0 0.25rem;
+    background: #00B085;
+}
+
+.saptopVerde {
+    padding-top: 7px;
+}
+
+.styleTexto1 {
+    padding: 9.5px;
+    background-color: #E5F7F2;
+}
+
+.styleTexto2 {
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    background-color: #E5F7F2;
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 18px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #00B085;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTexto5 {
+    background-color: #00B085;
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 28px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #E8FFFF;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleImagenFoto.sapMImg {
+    border-radius: 20px;
+}
+
+.styleCuerpo.sapMTB {
+    height: 42rem !important;
+    padding: 0 0.5rem 0 0.25rem;
+    background: #FFF;
+}
+
+.sapMSplitContainerDetail {
+    box-sizing: border-box;
+    height: 100%;
+    touch-action: pan-y;
+    background-color: white;
+    -ms-touch-action: pan-y;
+}
+
+.sapMPage>section.sapMPageEnableScrolling .sapMPage>section {
+    overflow-y: visible;
+    background-color: #FFF;
+}
+
+.styleSplitAppDemo.sapTntNavLI li,
+.sapTntNavLIItem {
+    position: relative;
+    background-color: #f7f7f7;
+}
+
+.sapMTBStandard {
+    border-bottom: solid .0625rem #f7f7f7;
+}
+
+.sapTntNavLIGroup {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.sapMSplitContainerMaster .sapMPageHeader {
+    background-color: #fff;
+    box-shadow: inset 0 -1px #f7f7f7;
+}
+
+.sapTntNavLIItem {
+    width: 100%;
+    height: 2.75rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    transition: 1s;
+}
+
+.styleCuerpo.sapMTB {
+    height: 35rem;
+    padding: 0 0.5rem 0 0.25rem;
+    background: #fff;
+}
+
+.sapTntNavLIItemSelected:not(.sapTntNavLIItemDisabled) {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+/* BOTON VERDE */
+.styleBotonVerde.sapMBtn:hover>.sapMBtnHoverable.sapMBtnEmphasized:not(.sapMBtnActive):not(.sapMToggleBtnPressed) {
+    background-color: #00B085;
+    border-color: #fff;
+    color: #fff;
+}
+
+.styleBotonVerde span.sapMBtnInner.sapMBtnEmphasized {
+    background-image: none;
+    background-color: #00B085;
+    border-color: #00B085;
+    color: #fff;
+    text-shadow: 0 0 0.125rem transparent;
+}
+
+.styleBotonVerde:not(.sapMBtnDisabled)>span.sapMBtnInner.sapMBtnEmphasized.sapMBtnActive {
+    background-color: #A5A5A5;
+    border-color: #A5A5A5;
+    text-shadow: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* BOTON VERDE */
+
+/* BOTON VERDE DIALOG*/
+.sapMBtn:hover>.sapMBtnHoverable.sapMBtnEmphasized:not(.sapMBtnActive):not(.sapMToggleBtnPressed) {
+    background-color: #00B085;
+    border-color: #fff;
+    color: #fff;
+}
+
+span.sapMBtnInner.sapMBtnEmphasized {
+    background-image: none;
+    background-color: #00B085;
+    border-color: #00B085;
+    color: #fff;
+    text-shadow: 0 0 0.125rem transparent;
+}
+
+:not(.sapMBtnDisabled)>span.sapMBtnInner.sapMBtnEmphasized.sapMBtnActive {
+    background-color: #A5A5A5;
+    border-color: #A5A5A5;
+    text-shadow: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* BOTON VERDE DIALOG*/
+
+.estilo1 {
+    margin-left: 13px;
+    border-bottom: 1px solid #fff;
+}
+
+.sapTntNavLIItemSelected:not(.sapTntNavLIItemDisabled) {
+    margin-left: 20px;
+    border-bottom: 1px solid #fff !important;
+    transition: 1s;
+}
+
+.sapTntNavLI .sapTntNavLIGroup.sapTntNavLIItem:not(.sapTntNavLIItemDisabled):active,
+.sapTntNavLI .stylemaster1.sapTntNavLIGroupItem.sapTntNavLIItem:not(.sapTntNavLIItemDisabled):active {
+    background-color: #C3C3C3 !important;
+    color: #C3C3C3 !important;
+    text-shadow: 1px 1px #C3C3C3 !important;
+}
+
+.sapTntNavLIItemSelected.sapTntNavLIItem,
+.sapTntNavLIItemSelected .sapTntNavLIGroup,
+.sapTntNavLIItemSelected.sapTntNavLIGroupItem.sapTntNavLIGroupItem {
+    background-color: #a9eada !important;
+}
+
+.sapTntNavLIItem .sapUiIcon {
+    color: #6a6d70 !important;
+}
+
+
+/*.styleMadeInVision1.sapMBtn:hover>.sapMBtnHoverable.sapMBtnEmphasized:not(.sapMBtnActive):not(.sapMToggleBtnPressed) {
+    background-color: #fff;
+    border-color: #fff;
+    color: #333333;
+    border: 4px solid #c93;
+    border-width: 4px 4px 4px 4px;
+    border-radius: 20px;
+    width: 250px;
+    height: 40px;
+    transition: 1s;
+}
+
+.styleMadeInVision1:not(.sapMBtnDisabled)>span.sapMBtnInner.sapMBtnEmphasized.sapMBtnActive{
+	background-color: #333333;
+    border-color: #333333;
+    color: #333333;
+    border: 4px solid #c93;
+    border-width: 4px 4px 4px 4px;
+    border-radius: 20px;
+    width: 250px;
+    height: 40px;
+    transition: 1s;
+}
+
+.styleMadeInVision1 span.sapMBtnInner.sapMBtnEmphasized {
+    background-image: none;
+    background-color: #fff;
+    border-color: #fff;
+    color: #333333;
+    text-shadow: 0 0 0.125rem transparent;
+    border: 4px solid #c93;
+    border-width: 4px 4px 4px 4px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    transition: 1s;
+}
+
+.styleMadeInVision2.sapMBtn:hover>.sapMBtnHoverable.sapMBtnEmphasized:not(.sapMBtnActive):not(.sapMToggleBtnPressed) {
+    background-color: #fff;
+    border-color: #fff;
+    color: #333333;
+    border: 4px solid #c93;
+    border-width: 4px 4px 4px 4px;
+    border-radius: 20px;
+    width: 250px;
+    height: 40px;
+    transition: 1s;
+}
+
+.styleMadeInVision2:not(.sapMBtnDisabled)>span.sapMBtnInner.sapMBtnEmphasized.sapMBtnActive{
+	background-color: #333333;
+    border-color: #333333;
+    color: #333333;
+    border: 4px solid #c93;
+    border-width: 4px 4px 4px 4px;
+    border-radius: 20px;
+    width: 250px;
+    height: 40px;
+    transition: 1s;
+}
+
+.styleMadeInVision2 span.sapMBtnInner.sapMBtnEmphasized {
+    background-image: none;
+    background-color: #fff;
+    border-color: #fff;
+    color: #333333;
+    text-shadow: 0 0 0.125rem transparent;
+    border: 4px solid #c93;
+    border-width: 4px 4px 4px 4px;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    transition: 1s;
+}
+
+.sapMBtnInner.sapMBtnText .sapMBtnIcon:before {
+    width: 1rem;
+    text-align: center;
+    display: inline-block;
+    color: #333333;
+    padding: 0 0 0 0.2rem;
+}*/
+
+/* ESTILO TAMAÑO LETRA */
+.styleTextoPlomo_10 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 10px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #696969;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoPlomo_13 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 12px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #696969;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoPlomo_15 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 15px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #696969;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoVerde_15 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 15px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #00B085;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoVerde_13 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 13px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #00B085;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoNegro_10 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 10px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoNegro_12 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 12px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoNegro_13 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 13px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoSVerde_12 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 12px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #00B085;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoSVerde_13 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 13px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #00B085;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoVerde_20 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 20px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #00B085;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoVerde_25 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 25px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #00B085;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoNegro_15 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoNegro_55 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoAguaNegro_55 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #D2D2D2;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoNegro_25 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoCursivaNegro_25 {
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: oblique;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoBlanco_20 {
+    background-color: #00B085;
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 20px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #E8FFFF;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.styleTextoBlanco_28 {
+    background-color: #00B085;
+    font-family: "72fallback", "72", "72full", Arial, Helvetica, sans-serif;
+    ;
+    font-size: 28px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    color: #E8FFFF;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+/* ESTILO TAMAÑO LETRA */
+
+/* BORDE */
+.styleBordeGas {
+    padding: 15px 23px 10px 5px;
+    border: #E1E1E1 1px solid;
+    border-radius: 5px;
+}
+
+/* BORDE */
+
+/* COMBO BOX */
+.styleComboBox.sapMInputBaseIconContainer .sapMInputBaseIcon {
+    color: #00B085 !important;
+}
+
+.styleComboBox.sapMInputBaseIconPressed .sapMInputBaseIcon,
+.sapMInputBaseIconPressed .sapMInputBaseIcon:hover {
+    background: #00B085 !important;
+    border-left-color: #00B085 !important;
+}
+
+.styleComboBox.sapMInputBaseIconContainer .sapMInputBaseIcon {
+    color: #00B085 !important;
+}
+
+.sapMInputBaseIconContainer .sapMInputBaseIcon:active {
+    background-color: #00B085 !important;
+    color: #fff !important;
+}
+
+/* COMBO BOX */
+
+/* FONDO VERDE SUABE */
+.styleFondoVerdeSueve {
+    background-color: #E5F7F2;
+}
+
+/* FONDO VERDE SUABE */
+
+/* WIZARD Y COLOR DE LOS ICONOS */
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepCircle {
+    background: #00B085;
+    color: #fff;
+}
+
+.sapMWizardProgressNavStepCircle {
+    border-color: #00B085;
+}
+
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepCircle::after {
+    height: .188rem;
+    background: #00B085;
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
+    bottom: -0.8745rem;
+}
+
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"]:hover .sapMWizardProgressNavStepCircle {
+    background-color: #A5A5A5;
+    color: #fff;
+}
+
+.sapMWizardProgressNavStep::after {
+    border-bottom-color: #00B085;
+}
+
+.sapUiIcon::before {
+    content: attr(data-sap-ui-icon-content);
+    speak: none;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #333333;
+}
+
+/* WIZARD Y COLOR DE LOS ICONOS */
+
+/* ESTILO TOGGLEBUTTON */
+html.sap-desktop .sapMToggleBtnPressed,
+.sapMToggleBtnPressed:not(.sapMBtnDisabled),
+html.sap-desktop .sapMIBar-CTX .sapMToggleBtnPressed,
+.sapMIBar-CTX .sapMToggleBtnPressed:not(.sapMBtnDisabled),
+html.sap-desktop .sapMTB-Transparent-CTX .sapMBtnInner.sapMToggleBtnPressed,
+.sapMTB-Transparent-CTX .sapMBtnInner.sapMToggleBtnPressed:not(.sapMBtnDisabled) {
+    background-image: none;
+    background-color: #00B085;
+    border-color: #00B085;
+    color: #fff;
+    text-shadow: none;
+
+}
+
+.sapMBtn:hover>.sapMBtnHoverable {
+    background-image: none;
+    background-color: #ebf5fe;
+    border-color: #00B085;
+}
+
+
+.sapMBtn:hover:not(.sapMBtnDisabled)>.sapMBtnHoverable:not(.sapMBtnDisabled):not(.sapMBtnActive):not(.sapMToggleBtnPressed):not(.sapMBtnTransparent).sapMBtnDefault,
+.sapMBtn:hover:not(.sapMBtnDisabled)>.sapMBtnHoverable:not(.sapMBtnDisabled):not(.sapMBtnActive):not(.sapMToggleBtnPressed):not(.sapMBtnTransparent).sapMBtnBack,
+.sapMBtn:hover:not(.sapMBtnDisabled)>.sapMBtnHoverable:not(.sapMBtnDisabled):not(.sapMBtnActive):not(.sapMToggleBtnPressed):not(.sapMBtnTransparent).sapMBtnGhost {
+    color: #00B085;
+}
+
+.sapMBtn:hover>.sapMBtnHoverable.sapMToggleBtnPressed:not(.sapMBtnActive),
+.sapMBtn .sapMBtnHoverable.sapMToggleBtnPressed:hover {
+    background-color: #00B085;
+    border-color: #00B085;
+    color: #fff;
+    text-shadow: none;
+}
+
+.sapMBtnInner {
+    border: .0625rem solid #00B085;
+}
+
+:not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
+    background-color: #00B085;
+    border-color: #00B085;
+}
+
+/* ESTILO TOGGLEBUTTON */
+
+/* TITULO STEP */
+.sapMWizardStep .sapMWizardStepTitle {
+    color: #32363a;
+    display: none;
+}
+
+/* TITULO STEP */

@@ -1,0 +1,1267 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:t="sap.tnt" xmlns:f="sap.f"
+	xmlns:cards="sap.f.cards" xmlns:tab="sap.ui.table" xmlns:micro="sap.suite.ui.microchart" xmlns:unified="sap.ui.unified" xmlns:grid="sap.ui.layout.cssgrid"
+	controllerName="namespace.HTML5Module.controller.Vista_DT_Principal"
+	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true">
+	<App id="app">
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<Bar id="idCabeceraRojo" visible="false"/>
+					<layout:VerticalLayout width="100%" id="idCabeceraBlanco" class="styleCabeceraBlanco">
+                        <layout:Grid>
+							<VBox width="100%">
+								<VBox height="100%">
+									<Label class="sapUiSmallMarginTop sapUiTinyMarginBegin styleTextoCursivaNegro_25" text="Portal de atención al cliente"></Label>
+									<Image class="sapUiTinyMarginBegin" src="./img/Logo4.PNG" width="166.76px" height="40px"/>
+									<!--<Image class="sapUiTinyMarginBegin" src="./img/Logo4.PNG" width="166.76px" height="40px"/>-->
+								</VBox>
+								<layoutData>
+									<layout:GridData span="XL6 L6 M6 S6"/>
+								</layoutData>
+							</VBox>
+							<VBox width="100%">
+								<layout:HorizontalLayout></layout:HorizontalLayout>
+								<layout:HorizontalLayout id="idEspacio1"></layout:HorizontalLayout>
+								<HBox class="sapUiSmallMarginTop" alignContent="End" alignItems="End" justifyContent="End">
+									<Label id="idTexto1" text="Saldo disponible: "/>
+									<Label id="idTexto2" text="S/ 1000,00"/>
+									<VBox>
+										<Label text="" class="sapUiTinyMargin"></Label>
+									</VBox>
+									<Button id="idCampanita" icon="sap-icon://bell" text="4" type="Transparent"/>
+									<VBox>
+										<Label text="" class="sapUiTinyMargin"></Label>
+									</VBox>
+									<VBox>
+										<Label id="idTexto3" text="Randy Fields" design="Bold"/>
+										<Label id="idTexto4" text="Administrador - KIO"/>
+									</VBox>
+									<VBox>
+										<Label text="" class="sapUiTinyMargin"></Label>
+									</VBox>
+									<Image class="sapUiTinyMarginEnd" id="idImagenFoto" src="./img/Foto.jpg" width="40px" height="40px"/>
+									<MenuButton class="sapUiSmallMarginEnd" type="Transparent">
+										<menu>
+											<Menu itemSelected="onMenuAction">
+												<items>
+													<MenuItem text="Información" icon="sap-icon://employee"/>
+													<MenuItem text="Log Out" icon="sap-icon://log"/>
+												</items>
+											</Menu>
+										</menu>
+									</MenuButton>
+								</HBox>
+								<layoutData>
+									<layout:GridData span="XL6 L6 M6 S6"/>
+								</layoutData>
+							</VBox>
+						</layout:Grid>
+					</layout:VerticalLayout>
+					<Toolbar id="idCabeceraVerde" width="100%">
+						<layout:Grid id="ObjectPageLayout2" defaultSpan="L12 M12 S12" width="100%">
+							<VBox class="sapUiSmallMarginTop saptopVerde" width="100%">
+								<HBox>
+									<Image src="./img/Cabecera2.PNG" width="177px" height="36px" visible="false"/>
+									<VBox>
+										<Label text="" class="sapUiTinyMargin"></Label>
+									</VBox>
+									<Label class="styleTextoBlanco_28" text="Randy Fields" design="Bold" visible="false"/>
+								</HBox>
+								<layoutData>
+									<layout:GridData span="XL6 L6 M6 S6"/>
+								</layoutData>
+							</VBox>
+						</layout:Grid>
+					</Toolbar>
+					<Toolbar id="idCuerpo" width="100%">
+						<content>
+							<SplitContainer id="SplitAppDemo">
+								<masterPages>
+									<Page id="master1" icon="sap-icon://action" floatingFooter="true" class="sapUiStdPage estilo1" showNavButton="{device>/isPhone}"
+										navButtonPress="NavPressMenu">
+										<t:NavigationList id="idNavigationList" selectedItem="id01">
+											<t:NavigationListItem id="id02" text="Flujo de compra" icon="sap-icon://customer-order-entry"/>
+											<t:NavigationListItem id="id03" text="Generar orden de SCOP" icon="sap-icon://clinical-tast-tracker"
+												select="handleSelectMenuItemGenerarOrdPedido"/>
+											<t:NavigationListItem id="id04" text="Cotizar" icon="sap-icon://customer-order-entry" select="handleSelectMenuItemGenerarCotizacion"/>
+											<t:NavigationListItem id="id05" text="Realizar pago" icon="sap-icon://customer-order-entry"/>
+											<t:NavigationListItem id="id06" text="Pedido" icon="sap-icon://appointment"/>
+											<t:NavigationListItem id="id07" text="Conzolidar transporte" icon="sap-icon://expense-report"/>
+											<t:NavigationListItem id="id08" text="Realizar cita" icon="sap-icon://key-user-settings" select="handleSelectMenuItemProgramarpedido"/>
+											<t:NavigationListItem id="id09" text="Validar SCOP" icon="sap-icon://customer-order-entry"/>
+											<t:NavigationListItem id="id10" text="Validar cisterna" icon="sap-icon://customer-order-entry" select="handleSelectMenuItemValidarCisterna"/>
+											<t:NavigationListItem id="id11" text="Validar conductor" icon="sap-icon://customer-order-entry"
+												select="handleSelectMenuItemAValidarconductor"/>
+											<t:NavigationListItem id="id12" text="Validar saldos" icon="sap-icon://customer-order-entry"/>
+											<t:NavigationListItem id="id13" text="Tracking" icon="sap-icon://insurance-car"/>
+										</t:NavigationList>
+									</Page>
+								</masterPages>
+								<detailPages>
+									<Page id="idDetail_0_1" showHeader="true" showNavButton="{device>/isPhone}" class="sapUiStdPage">
+										<content>
+											<VBox alignContent="Center" justifyContent="Center">
+												<HBox alignContent="Center" justifyContent="Center">
+													<Image src="./img/Principal.PNG" width="692px" height="425px"/>
+												</HBox>
+												<layout:HorizontalLayout></layout:HorizontalLayout>
+												<HBox alignContent="Center" justifyContent="Center">
+													<Button id="idAtenderPedido" type="Emphasized" text="Atender un pedido"/>
+												</HBox>
+											</VBox>
+										</content>
+									</Page>
+									<Page id="idDetail_1_1" showHeader="true" showNavButton="{device>/isPhone}" class="sapUiStdPage">
+										<Wizard id="idWizard1" currentStep="idSeccion11" renderMode="Page">
+											<WizardStep id="idSeccion11" validated="false" title="Datos de la Orden" visible="true" icon="sap-icon://overlay">
+												<content>
+													<layout:VerticalLayout width="100%">
+														<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+															<VBox>
+																<VBox alignContent="Start" alignItems="Start" justifyContent="Start">
+																	<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text="Generar orden de SCOP"></Label>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</VBox>
+															<VBox>
+																<HBox alignContent="End" alignItems="End" justifyContent="End"></HBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</VBox>
+														</layout:Grid>
+														<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+															width="100%">
+															<HBox alignContent="Center" justifyContent="Center">
+																<VBox>
+																	<Label text="Nueva orden de pedido simple" class="sapUiSmallMarginTop styleTextoNegro_15"></Label>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL12 L12 M12 S12"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox>
+																	<HBox class="sapUiSmallMarginBegin">
+																		<Label text="Estación: " class="sapUiSmallMarginEnd styleTextoVerde_15"></Label>
+																		<Label text="Las Flores - Sede Primavera" design="Bold"></Label>
+																	</HBox>
+																	<HBox class="sapUiSmallMarginBegin">
+																		<Label text="Código Osinergmin: " class="sapUiSmallMarginEnd styleTextoVerde_15"></Label>
+																		<Label text="0800123"></Label>
+																	</HBox>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox>
+																	<HBox class="sapUiSmallMarginEnd">
+																		<Label text="Dirección: " class="sapUiSmallMarginEnd styleTextoVerde_15"></Label>
+																		<Label text="Jr. Caraballa N° 123"></Label>
+																	</HBox>
+																	<HBox class="sapUiSmallMarginEnd">
+																		<Label text="Registro hidrocarburo: " class="sapUiSmallMarginEnd styleTextoVerde_15"></Label>
+																		<Label text="123HTML"></Label>
+																	</HBox>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+														<layout:HorizontalLayout></layout:HorizontalLayout>
+														<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox width="100%">
+																	<Label text="Planta" class="styleTextoNegro_15" required="true"></Label>
+																	<ComboBox id="idPlanta" items="{ path: 'myParam>/T_PLANTA'}" placeholder="Seleccione una planta" width="100%" required="true" value=""
+																		valueStateText="Se requiere seleccionar un tipo de orden." selectionChange="handleSelectionChangePlanta">
+																		<core:ListItem key="{myParam>CODIGO}" text="{myParam>DESCRIPCION}"/>
+																	</ComboBox>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label text="Placa de transporte (opcional)" class="styleTextoNegro_15" required="false"></Label>
+																	<Select id="idSelectPlacaTransporte" forceSelection="false" items="{ path: 'myParam>/T_PLACA_TRANSPORTE'}" width="100%"
+																		change="handleChangePlacaTransporte" selectedKey="PT0000">
+																		<core:ListItem key="{myParam>CODIGO}" text="{myParam>DESCRIPCION}"
+																			icon="{ path: 'myParam>ESTADO', formatter: '.formatEstadoPlacaTransporte' }"/>
+																	</Select>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox width="100%">
+																	<Label text="Fecha de entrega" class="styleTextoNegro_15" required="true"></Label>
+																	<DatePicker id="idFechaDeEntrega" displayFormat="yyyy-MM-dd" placeholder="Seleccione una fecha de entrega" change="handleChangeFecEntrega"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label text="" class="styleTextoNegro_15" required="false"></Label>
+																	<Button id="idSiguiente1" type="Emphasized" text="Siguiente" press="onPressSiguiente1" width="75%"/>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+													</layout:VerticalLayout>
+												</content>
+											</WizardStep>
+											<WizardStep id="idSeccion12" validated="false" title="Agregar Volumen" visible="true" icon="sap-icon://circle-task">
+												<content>
+													<layout:VerticalLayout width="100%">
+														<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+															<VBox>
+																<VBox alignContent="Start" alignItems="Start" justifyContent="Start">
+																	<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text="Generar orden de SCOP"></Label>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</VBox>
+															<VBox>
+																<HBox alignContent="End" alignItems="End" justifyContent="End" width="100%">
+																	<Button id="idRegistrarOrden1" class="sapUiMediumMarginTop sapUiSmallMarginEnd" type="Emphasized" text="Registrar Orden"
+																		press="onPressRegistrarOrden1" width="100%"/>
+																</HBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</VBox>
+														</layout:Grid>
+														<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+															width="100%">
+															<HBox alignContent="Center" justifyContent="Center">
+																<VBox>
+																	<Label text="Ingresar el volumen del pedido" class="sapUiSmallMarginTop styleTextoNegro_15"></Label>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL12 L12 M12 S12"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox>
+																	<HBox class="sapUiSmallMarginBegin">
+																		<Label text="Placa de transporte: " class="sapUiSmallMarginEnd styleTextoVerde_15"></Label>
+																		<Label text="AHI 3456"></Label>
+																	</HBox>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<HBox class="sapUiSmallMarginBegin">
+																		<Label text="Capacidad total: " class="sapUiSmallMarginEnd styleTextoVerde_15"></Label>
+																		<Label text="1000 gal"></Label>
+																	</HBox>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox>
+																	<HBox class="sapUiSmallMarginEnd">
+																		<Label text="Compartimiento: " class="sapUiSmallMarginEnd styleTextoVerde_15"></Label>
+																		<Label text="4"></Label>
+																	</HBox>
+																	<HBox class="sapUiSmallMarginEnd">
+																		<Button id="idLicencias" type="Emphasized" text="Licencias" icon="sap-icon://information" press="onPressLicencias" width="100%"/>
+																	</HBox>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+														<layout:HorizontalLayout></layout:HorizontalLayout>
+														<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+															<HBox alignContent="Center" justifyContent="Center">
+																<VBox>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<HBox class="sapUiSmallMarginBegin" alignContent="Center" justifyContent="Center">
+																		<!--<Image src="./img/CamionCompartimientos.PNG" width="536.49px" height="200px"/>-->
+																		<Image src="./img/CamionCompartimientos2.PNG" width="100%" height="90%"/>
+																	</HBox>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL8 L8 M8 S8"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Center" justifyContent="Center">
+																<VBox>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label class="styleTextoNegro_13" text="Capacidad Total" design="Bold"/>
+																	<Input type="Text" value="1000 gal" editable="false" width="100%" textAlign="Center"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label class="styleTextoNegro_13" text="Capacidad disponible" design="Bold"/>
+																	<Input type="Text" value="400 gal" editable="false" width="100%" textAlign="Center"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label class="styleTextoNegro_13" text="Capacidad ocupada" design="Bold"/>
+																	<Input type="Text" value="600 gal" editable="false" width="100%" textAlign="Center"/>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL4 L4 M4 S4"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+														<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox>
+																	<tab:Table id="idTblRegistroOrdenPedido" sort="sortDeliveryDate" rows="{ path: 'myParam>/listTblRegistroOrdenPedido'}"
+																		visibleRowCount="{ path: 'myParam>/listTblRegistroOrdenPedido/length'}" showNoData="No se hallaron Items." width="100%">
+																		<tab:toolbar>
+																			<Toolbar height="auto">
+																				<ToolbarSpacer/>
+																				<Button id="idAgregarOtroIngreso1" text="Agregar otro" icon="sap-icon://sys-add" press="onPressAgregarIngreso1" type="Emphasized"/>
+																			</Toolbar>
+																		</tab:toolbar>
+																		<tab:noData>
+																			<Link class="sapUiMediumMargin" text="Ningún item encontrado."/>
+																		</tab:noData>
+																		<tab:columns>
+																			<tab:Column width="20%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text="Compartimiento"/>
+																				<tab:template>
+																					<ComboBox id="idCompartimiento" items="{ path: 'myParam>/listTblCompartimiento'}" placeholder="Seleccione un compartimiento" width="100%"
+																						required="true" value="{myParam>COMPARTIMIENTO}" valueStateText="Se requiere seleccionar un tipo de orden.">
+																						<core:ListItem key="{myParam>VALOR}" text="Comp. {myParam>VALOR}"/>
+																					</ComboBox>
+																				</tab:template>
+																			</tab:Column>
+																			<tab:Column width="20%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text="Capacidad comp."/>
+																				<tab:template>
+																					<Label class="styleTextoPlomo_13" text="{myParam>CAPACIDAD_COMP} gal" wrapping="true"/>
+																				</tab:template>
+																			</tab:Column>
+																			<tab:Column width="20%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text="Producto"/>
+																				<tab:template>
+																					<ComboBox id="idProducto" items="{ path: 'myParam>/listTblProducto1'}" placeholder="Seleccione un producto" width="100%" required="true"
+																						value="{myParam>PRODUCTO}" valueStateText="Se requiere seleccionar un tipo de orden.">
+																						<core:ListItem key="{myParam>CODIGO}" text="{myParam>DESCRIPCION}"/>
+																					</ComboBox>
+																				</tab:template>
+																			</tab:Column>
+																			<tab:Column width="20%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text="Agregar capacidad"/>
+																				<tab:template>
+																					<Input type="Text" value="0" editable="true" width="100%" textAlign="Center"/>
+																				</tab:template>
+																			</tab:Column>
+																			<tab:Column width="20%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text=""/>
+																				<tab:template>
+																					<HBox justifyContent="Center">
+																						<core:Icon class="sapUiSmallMarginEnd" src="sap-icon://delete" alt="Cart" size="1.25rem"/>
+																						<Link text="Quitar"/>
+																					</HBox>
+																				</tab:template>
+																			</tab:Column>
+																		</tab:columns>
+																	</tab:Table>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL12 L12 M12 S12"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+													</layout:VerticalLayout>
+												</content>
+											</WizardStep>
+											<WizardStep id="idSeccion13" validated="false" title="Orden Registrada" visible="true" icon="sap-icon://circle-task">
+												<content>
+													<layout:VerticalLayout width="100%">
+														<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+															<VBox>
+																<VBox alignContent="Start" alignItems="Start" justifyContent="Start">
+																	<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text="Generar orden de SCOP"></Label>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL6 L6 M6 S6"/>
+																</layoutData>
+															</VBox>
+														</layout:Grid>
+														<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+															width="100%">
+															<HBox alignContent="Center" justifyContent="Center">
+																<VBox>
+																	<Label text="Detalles de orden registrada" class="sapUiSmallMarginTop styleTextoNegro_15"></Label>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL12 L12 M12 S12"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Center" justifyContent="Center">
+																<VBox>
+																	<HBox class="sapUiSmallMarginBegin">
+																		<Label text="Código de autorización:" class="sapUiTinyMarginTop styleTextoVerde_20"></Label>
+																	</HBox>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL4 L4 M4 S4"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Center" justifyContent="Center">
+																<VBox>
+																	<HBox class="sapUiSmallMarginBegin">
+																		<Label text="10203757450982" class="sapUiTinyMarginTop styleTextoVerde_20"></Label>
+																	</HBox>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL4 L4 M4 S4"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Center" justifyContent="Center">
+																<VBox>
+																	<HBox class="sapUiSmallMarginEnd">
+																		<Button id="idDescargarOrden1" type="Emphasized" text="Descargar" press="onPressDescargarOrden1" width="100%"/>
+																	</HBox>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL4 L4 M4 S4"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+														<layout:HorizontalLayout></layout:HorizontalLayout>
+														<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox width="100%">
+																	<Label text="Razón social:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="Aero Tecnic E.I.R.L." editable="false" width="100%" textAlign="Left"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label text="Registro DGH:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="3456-GHJK-678" editable="false" width="100%" textAlign="Left"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label text="Planta:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="Terminal Callao" editable="false" width="100%" textAlign="Left"/>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL4 L4 M4 S4"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox width="100%">
+																	<Label text="Destinatario:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="Las Flores - Sede Primavera" editable="false" width="100%" textAlign="Left"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label text="Placa transporte:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="AH1-5491" editable="false" width="100%" textAlign="Left"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label text="Fecha entrega:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="2020-03-22" editable="false" width="100%" textAlign="Left"/>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL4 L4 M4 S4"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox width="100%">
+																	<Label text="Código Oscinergmin:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="345678" editable="false" width="100%" textAlign="Left"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label text="Estado:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="Solicitado" editable="false" width="100%" textAlign="Left"/>
+																	<layout:HorizontalLayout></layout:HorizontalLayout>
+																	<Label text="Fecha de registro orden:" class="styleTextoNegro_15" required="false"></Label>
+																	<Input type="Text" value="2021-08-27" editable="false" width="100%" textAlign="Left"/>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL4 L4 M4 S4"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+														<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+															<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start">
+																<VBox>
+																	<tab:Table id="idTblOrdenPedido1" sort="sortDeliveryDate" rows="{ path: 'myParam>/listTblOrdenPedido1'}" visibleRowCount="2"
+																		showNoData="No se hallaron Items." width="100%">
+																		<tab:noData>
+																			<Link class="sapUiMediumMargin" text="Ningún item encontrado."/>
+																		</tab:noData>
+																		<tab:columns>
+																			<tab:Column width="25%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text="Producto"/>
+																				<tab:template>
+																					<Label class="styleTextoPlomo_13" text="{myParam>PRODUCTO}" wrapping="true"/>
+																				</tab:template>
+																			</tab:Column>
+																			<tab:Column width="25%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text="Volumén pedido (gls)"/>
+																				<tab:template>
+																					<Label class="styleTextoPlomo_13" text="{myParam>VOL_PEDIDO}" wrapping="true"/>
+																				</tab:template>
+																			</tab:Column>
+																			<tab:Column width="25%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text="Transporte"/>
+																				<tab:template>
+																					<Label class="styleTextoPlomo_13" text="{myParam>TRANSPORTE}" wrapping="true"/>
+																				</tab:template>
+																			</tab:Column>
+																			<tab:Column width="25%" hAlign="Center">
+																				<Text class="styleTextoVerde_13" text="Estado"/>
+																				<tab:template>
+																					<Label class="styleTextoPlomo_13" text="{myParam>ESTADO}" wrapping="true"/>
+																				</tab:template>
+																			</tab:Column>
+																		</tab:columns>
+																	</tab:Table>
+																</VBox>
+																<layoutData>
+																	<layout:GridData span="XL12 L12 M12 S12"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+														<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+															<HBox alignContent="End" justifyContent="End">
+																<VBox></VBox>
+																<layoutData>
+																	<layout:GridData span="XL1 L1 M1 S1"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Center" justifyContent="Center">
+																<HBox alignContent="Center" justifyContent="Center">
+																	<Button type="Emphasized" class="sapUiSmallMarginEnd" text="INGRESAR NUEVO SCOP" press="onPressIngresarScop"/>
+																	<Button type="Emphasized" text="REPORTE CÓD. SCOP" press="onPressReporteCodScop"/>
+																</HBox>
+																<layoutData>
+																	<layout:GridData span="XL10 L10 M10 S10"/>
+																</layoutData>
+															</HBox>
+															<HBox alignContent="Start" justifyContent="Start">
+																<VBox></VBox>
+																<layoutData>
+																	<layout:GridData span="XL1 L1 M1 S1"/>
+																</layoutData>
+															</HBox>
+														</layout:Grid>
+													</layout:VerticalLayout>
+												</content>
+											</WizardStep>
+										</Wizard>
+									</Page>
+									<Page id="idDetail_1_2" showHeader="true" showNavButton="{device>/isPhone}" class="sapUiStdPage">
+										<content>
+											<layout:VerticalLayout width="100%">
+												<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+													<VBox>
+														<VBox alignContent="Start" alignItems="Start" justifyContent="Start">
+															<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text="REPORTE DE CÓDIGOS DE SCOP"></Label>
+															<HBox>
+																<core:Icon class="sapUiSmallMarginBegin sapUiTinyMarginEnd" src="sap-icon://close-command-field" alt="Cart"/>
+																<Link text="Atrás" press="handleLinkPressAtras1"/>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+												</layout:Grid>
+												<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start">
+														<VBox>
+															<tab:Table id="idTblReporteScop" sort="sortDeliveryDate" rows="{ path: 'myParam>/listTblReporteScop'}"
+																visibleRowCount="{ path: 'myParam>/listTblReporteScop/length'}" visibleRowCountMode="Auto" showNoData="No se hallaron Items." width="100%"
+																enableColumnFreeze="true" cellClick="handleCellClickReporteScop">
+																<tab:toolbar>
+																	<Toolbar height="auto">
+																		<ToolbarSpacer/>
+																		<Button id="idDescargar1" text="Descargar" icon="sap-icon://excel-attachment" press="onPressDescargar1" type="Emphasized"/>
+																	</Toolbar>
+																</tab:toolbar>
+																<tab:noData>
+																	<Link class="sapUiMediumMargin" text="Ningún item encontrado."/>
+																</tab:noData>
+																<tab:columns>
+																	<tab:Column width="25%" hAlign="Center" sortProperty="CODIGO" filterProperty="CODIGO">
+																		<Text class="styleTextoVerde_13" text="Código SCOP"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>CODIGO}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center" sortProperty="PLANTA" filterProperty="PLANTA">
+																		<Text class="styleTextoVerde_13" text="Planta"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>PLANTA}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center" sortProperty="USER_COMPRADOR" filterProperty="USER_COMPRADOR">
+																		<Text class="styleTextoVerde_13" text="Usuario comprador"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>USER_COMPRADOR}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center" sortProperty="FEC_PEDIDO" filterProperty="FEC_PEDIDO">
+																		<Text class="styleTextoVerde_13" text="Fecha pedido"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>FEC_PEDIDO}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center" sortProperty="FEC_ENTREGA" filterProperty="FEC_ENTREGA">
+																		<Text class="styleTextoVerde_13" text="Fecha entrega"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>FEC_ENTREGA}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center" sortProperty="ESTADO" filterProperty="ESTADO">
+																		<Text class="styleTextoVerde_13" text="Estado"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>ESTADO}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																</tab:columns>
+															</tab:Table>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL12 L12 M12 S12"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+											</layout:VerticalLayout>
+										</content>
+									</Page>
+									<Page id="idDetail_1_3" showHeader="true" showNavButton="{device>/isPhone}" class="sapUiStdPage">
+										<content>
+											<layout:VerticalLayout width="100%">
+												<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+													<VBox>
+														<VBox alignContent="Start" alignItems="Start" justifyContent="Start">
+															<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text="REPORTE DE CÓDIGOS DE SCOP"></Label>
+															<HBox>
+																<core:Icon class="sapUiSmallMarginBegin sapUiTinyMarginEnd" src="sap-icon://close-command-field" alt="Cart"/>
+																<Link text="Atrás" press="handleLinkPressAtras2"/>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+													<VBox>
+														<VBox alignContent="End" alignItems="End" justifyContent="End">
+															<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text=""></Label>
+															<HBox>
+																<Button type="Emphasized" class="sapUiSmallMarginEnd" text="Anular SCOP" icon="sap-icon://delete" press="onPressAnularScop"/>
+																<Button type="Emphasized" text="Cerrar SCOP" icon="sap-icon://locked" press="onPressCerrarScop"/>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+												</layout:Grid>
+												<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+													width="100%">
+													<HBox alignContent="Center" justifyContent="Center">
+														<VBox>
+															<HBox class="sapUiSmallMarginBegin">
+																<Label text="Código de autorización:" class="sapUiSmallMarginTop styleTextoVerde_20"></Label>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Center" justifyContent="Center">
+														<VBox>
+															<HBox class="sapUiSmallMarginBegin">
+																<Label text="10203757450982" class="sapUiSmallMarginTop styleTextoVerde_20"></Label>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:HorizontalLayout></layout:HorizontalLayout>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<Label text="Razón social:" class="styleTextoNegro_15" required="false"></Label>
+															<Input type="Text" value="Aero Tecnic E.I.R.L." editable="false" width="100%" textAlign="Left"/>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+															<Label text="Estado:" class="styleTextoNegro_15" required="false"></Label>
+															<Input type="Text" value="Solicitado" editable="false" width="100%" textAlign="Left"/>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<Label text="Planta:" class="styleTextoNegro_15" required="false"></Label>
+															<Input type="Text" value="Terminal Callao" editable="false" width="100%" textAlign="Left"/>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+															<Label text="Fecha registro:" class="styleTextoNegro_15" required="false"></Label>
+															<Input type="Text" value="2020-03-22" editable="false" width="100%" textAlign="Left"/>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<Label text="Usuario comprador:" class="styleTextoNegro_15" required="false"></Label>
+															<Input type="Text" value="Las Flores - Sede Primavera" editable="false" width="100%" textAlign="Left"/>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+															<Label text="Fecha entrega:" class="styleTextoNegro_15" required="false"></Label>
+															<Input type="Text" value="2020-03-22" editable="false" width="100%" textAlign="Left"/>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start">
+														<VBox>
+															<tab:Table id="idTblOrdenPedido2" sort="sortDeliveryDate" rows="{ path: 'myParam>/listTblOrdenPedido2'}"
+																visibleRowCount="{ path: 'myParam>/listTblOrdenPedido2/length'}" showNoData="No se hallaron Items." width="100%">
+																<tab:noData>
+																	<Link class="sapUiMediumMargin" text="Ningún Item Encontrado."/>
+																</tab:noData>
+																<tab:columns>
+																	<tab:Column width="25%" hAlign="Center">
+																		<Text class="styleTextoVerde_13" text="Producto"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>PRODUCTO}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center">
+																		<Text class="styleTextoVerde_13" text="Volumén pedido (gls)"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>VOL_PEDIDO}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center">
+																		<Text class="styleTextoVerde_13" text="Transporte"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>TRANSPORTE}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center">
+																		<Text class="styleTextoVerde_13" text="Estado"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>ESTADO}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																</tab:columns>
+															</tab:Table>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL12 L12 M12 S12"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+											</layout:VerticalLayout>
+										</content>
+									</Page>
+									<Page id="idDetail_2_1" showHeader="true" showNavButton="{device>/isPhone}" class="sapUiStdPage">
+										<content>
+											<layout:VerticalLayout width="100%" id="gridLayout">
+												<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+													<VBox>
+														<VBox alignContent="Start" alignItems="Start" justifyContent="Start">
+															<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text="Resultados de búsqueda del vehículo"></Label>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+													<VBox>
+														<HBox alignContent="End" alignItems="End" justifyContent="End" width="100%">
+															<Label class="sapUiMediumMarginTop sapUiSmallMarginEnd" text="Estado del vehículo al"></Label>
+															<MessageStrip text="21/12/2020" type="Success" showCloseButton="false"></MessageStrip>
+														</HBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+												</layout:Grid>
+												<Panel expanded="false" width="auto" class="sapUiResponsiveMargin">
+													<headerToolbar>
+														<Toolbar>
+															<Title level="H2" text="Ingresar número de placa de cisterna" textAlign="End"/>
+															<Input type="Text" width="30%" placeholder="Ingrese vehiculo" editable="true"/>
+															<Button id="idBusqueda1" type="Emphasized" text="BUSCAR" press="handleLinkObjectAttributePresss"/>
+														</Toolbar>
+													</headerToolbar>
+													<Toolbar>
+														<Title level="H2" text="Seleccionar placa de tractor para cisterna" textAlign="End"/>
+														<MessageStrip text="ABCD-1234" type="Success" showCloseButton="false"></MessageStrip>
+													</Toolbar>
+													<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+														<HeaderContainer scrollStep="600" id="container2" height="200%">
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button1" text="DRA-1234" press="onPress1"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button2" text="ENA-1234" press="onPress2"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button3" text="ENA-2345" press="onPress3"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button4" text="ENA-5678" press="onPress4"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button5" text="DRA-1234" press="onPress5"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button6" text="DRA-1234" press="onPress6"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button7" text="DRA-1234" press="onPress7"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button8" text="DRA-1234" press="onPress8"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button9" text="DRA-1234" press="onPress9"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button10" text="DRA-1234" press="onPress10"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button11" text="DRA-1234" press="onPress11"
+																enabled="true" pressed="false"/>
+															<ToggleButton class="styleTextoNegro_25 sapUiSmallMarginBegin sapUiSmallMarginTop" id="button12" text="DRA-1234" press="onPress12"
+																enabled="true" pressed="false"/>
+														</HeaderContainer>
+													</layout:Grid>
+												</Panel>
+												<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+													width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox>
+															<Label text="Compartimientos" class="styleTextoVerde_25 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL12 L12 M12 S12"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginTop " containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox>
+															<HBox class="sapUiSmallMarginBegin">
+																<Label text="Capacidad Total" class="styleTextoNegro_15 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+																<Label text="2900 gal" class="styleTextoNegro_15 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox>
+															<HBox class="sapUiSmallMarginBegin ">
+																<Label text="N° Compartimientos" class="styleTextoNegro_15 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+																<Label text="4" class=" styleTextoNegro_15 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+															<HBox class="sapUiSmallMarginBegin" alignContent="Center" justifyContent="Center">
+																<Image alt="nature" src="./img/vehiculo_frente2.png" class="responsive"/>
+															</HBox>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6" spanXL="2" spanL="2" spanM="4" spanS="8"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<Carousel class="sapUiContentPadding" showPageIndicator="False" pages="{path: 'myParam>/listTblproducto'}">
+																<customLayout>
+																	<CarouselLayout visiblePagesCount="{settingsv1>/pagesCount}"/>
+																</customLayout>
+																<f:Card >
+																	<f:content>
+																		<VBox height="150px" width="150px">
+																			<HBox>
+																				<Label text="Capacidad total:" class=" styleTextoNegro_15 sapUiSmallMarginBegin sapUiSmallMarginTop" wrapping="true"></Label>
+																			</HBox>
+																			<HBox>
+																				<Text class=" styleTextoNegro_15 sapUiSmallMarginBegin sapUiSmallMarginTop" text="{myParam>Capacidad_total} Gal"/>
+																			</HBox>
+																			<HBox alignContent="Center" justifyContent="Center">
+																				<Text class="watermark styleTextoAguaNegro_55" text="{myParam>numero}"/>
+																			</HBox>
+																		</VBox>
+																	</f:content>
+																</f:Card>
+															</Carousel>
+															<HBox class="sapUiSmallMarginEnd" alignContent="Start" justifyContent="Start">
+																<Image src="./img/vehiculo_atrasv2.png" class="responsive" alt="nature2"/>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL8 L8 M8 S8"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+													width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox>
+															<Label text="Grupo de productos autorizados" class="styleTextoVerde_25 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL12 L12 M12 S12"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<HeaderContainer scrollStep="200" id="container1">
+														<Title class="sapUiSmallMarginBegin sapUiSmallMarginTop styleTextoNegro_25" text="Grupo1"/>
+														<Title class="sapUiSmallMarginBegin sapUiSmallMarginTop styleTextoNegro_25" text="Grupo2"/>
+														<Title class="sapUiSmallMarginBegin sapUiSmallMarginTop styleTextoNegro_25" text="Grupo3"/>
+														<Title class="sapUiSmallMarginBegin sapUiSmallMarginTop styleTextoNegro_25" text="Grupo4"/>
+														<Title class="sapUiSmallMarginBegin sapUiSmallMarginTop styleTextoNegro_25" text="Grupo5"/>
+													</HeaderContainer>
+												</layout:Grid>
+												<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+													width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox>
+															<Label text="Licencias" class="styleTextoVerde_25 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL12 L12 M12 S12"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<tab:Table selectionMode="None" rows="{path: 'myParam>/listTbltipoLicencia'}" visibleRowCount="4">
+														<tab:columns>
+															<tab:Column>
+																<Label text="Tipo de licencia"/>
+																<tab:template>
+																	<Label text="{myParam>Tipo_licencia}"/>
+																</tab:template>
+															</tab:Column>
+															<tab:Column>
+																<Label text="Fecha de vencimiento"/>
+																<tab:template>
+																	<Label text="{myParam>f_vencimiento}"/>
+																</tab:template>
+															</tab:Column>
+															<tab:Column>
+																<Label text="Status"/>
+																<tab:template>
+																	<ObjectStatus
+																		text="{parts: [{path: 'myParam>tiempo'},{path: 'myParam>tipo_tiempo'},{path: 'myParam>status'}],formatter: '.formatVencimiento1'}"
+																		icon="{ path: 'myParam>status', formatter: '.formatStatusIcon1' }" state="{ path: 'myParam>status', formatter: '.formatStatusState1' }"/>
+																</tab:template>
+															</tab:Column>
+														</tab:columns>
+													</tab:Table>
+												</layout:Grid>
+											</layout:VerticalLayout>
+										</content>
+									</Page>
+									<Page id="idDetail_3_1" showHeader="true" showNavButton="{device>/isPhone}" class="sapUiStdPage">
+										<content>
+											<layout:VerticalLayout width="100%" id="gridLayoutv2">
+												<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+													<VBox>
+														<VBox alignContent="Start" alignItems="Start" justifyContent="Start">
+															<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text="Búsqueda de conductor"></Label>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+													<VBox>
+														<HBox alignContent="End" alignItems="End" justifyContent="End" width="100%">
+															<Label class="sapUiMediumMarginTop sapUiSmallMarginEnd" text="Estado del conductor al"></Label>
+															<MessageStrip text="21/12/2020" type="Success" showCloseButton="false"></MessageStrip>
+														</HBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+												</layout:Grid>
+												<Panel expanded="false" width="auto" class="sapUiResponsiveMargin">
+													<headerToolbar>
+														<Toolbar>
+															<Title level="H2" text="Ingrese nombre o numero de DNI del conductor" textAlign="End"/>
+															<!--<Input type="Text" width="30%" placeholder="Ingrese nombre o DNI" editable="true"/>-->
+															<Input id="idTextDniConductor" placeholder="Ingrese nombre o DNI" change="handleChangeDniConductor" showSuggestion="true"
+																suggestionItems="{path: 'myParam>/listConductor1'}" width="30%">
+																<suggestionItems>
+																	<core:ListItem text="{myParam>DNI}" additionalText="{myParam>APELLIDO}, {myParam>NOMBRE}"/>
+																</suggestionItems>
+															</Input>
+															<!--<Button id="idBusqueda4_0" type="Emphasized" text="BUSCAR" press="handleLinkObjectAttributePresss"/>-->
+														</Toolbar>
+													</headerToolbar>
+												</Panel>
+												<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+													width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox>
+															<Label text="Datos del conductor" class="styleTextoVerde_25 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL12 L12 M12 S12"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:HorizontalLayout></layout:HorizontalLayout>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<Label text="Nombre:" class="styleTextoNegro_15" required="false"></Label>
+															<Input id="idTextSetConductorNombre" type="Text" placeholder="Ingrese nombre" editable="false"/>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+															<Label text="DNI:" class="styleTextoNegro_15" required="false"></Label>
+															<Input id="idTextSetConductorDni" type="Text" placeholder="Ingrese DNI" editable="false"/>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<Label text="Apellido:" class="styleTextoNegro_15" required="false"></Label>
+															<Input id="idTextSetConductorApellido" type="Text" placeholder="Ingrese apellido" editable="false"/>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+															<Label text="Nro. Licencia de conductor" class="styleTextoNegro_15" required="false"></Label>
+															<Input id="idTextSetConductorNuoLicencia" type="Text" placeholder="Ingrese Licencia conductor" editable="false"/>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox>
+															<HBox class="sapUiSmallMarginBegin" alignContent="Center" justifyContent="Center">
+																<Image alt="nature" src="./img/usuarioreglafrente.png" class="responsive" width="100%" height="100%"/>
+															</HBox>
+															<layout:HorizontalLayout></layout:HorizontalLayout>
+															<HBox class="sapUiSmallMarginBegin" alignContent="Start" justifyContent="Start" width="90%">
+																<Label id="idLabelSetConductorCalificacion" text="0 | " class="styleTextoNegro_15 sapUiSmallMarginBegin sapUiSmallMarginEnd"></Label>
+																<RatingIndicator id="idRaInSetConductorCalificacion" maxValue="5" class="sapUiSmallMarginBottom" value="0" tooltip="Rating Tooltip"
+																	displayOnly="true"/>
+																<Label text="|" class="styleTextoNegro_15 sapUiSmallMarginBegin sapUiSmallMarginEnd"></Label>
+																<core:Icon src="sap-icon://information" class="size1" color="#031E48"></core:Icon>
+															</HBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid class="styleFondoVerdeSueve sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+													width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox>
+															<Label text="Licencias de transporte de producto" class="styleTextoVerde_25 sapUiSmallMarginBegin sapUiSmallMarginTop"></Label>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL12 L12 M12 S12"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<tab:Table selectionMode="None" rows="{path: 'myParam>/listTbltipoLicencia'}" visibleRowCount="4">
+														<tab:columns>
+															<tab:Column>
+																<Label text="Tipo_licencia"/>
+																<tab:template>
+																	<Label text="{myParam>Tipo_licencia}"/>
+																</tab:template>
+															</tab:Column>
+															<tab:Column>
+																<Label text="fecha vencimiento"/>
+																<tab:template>
+																	<Label text="{myParam>f_vencimiento}"/>
+																</tab:template>
+															</tab:Column>
+															<tab:Column>
+																<Label text="Satus"/>
+																<tab:template>
+																	<ObjectStatus
+																		text="{parts: [{path: 'myParam>tiempo'},{path: 'myParam>tipo_tiempo'},{path: 'myParam>status'}],formatter: '.formatVencimiento1'}"
+																		icon="{ path: 'myParam>status', formatter: '.formatStatusIcon1' }" state="{ path: 'myParam>status', formatter: '.formatStatusState1' }"/>
+																</tab:template>
+															</tab:Column>
+														</tab:columns>
+													</tab:Table>
+												</layout:Grid>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginTop" containerQuery="true" defaultSpan="XL12 L12 M12 S12"
+													width="100%">
+													<HBox alignContent="Center" justifyContent="Center">
+														<VBox>
+															<Image class="sapUiSmallMarginTop" src="./img/social-whatsapp-circle-512.png" press="handleUrlPress" width="64px" height="64px"/>				
+														</VBox>
+														<VBox>
+															<Image class="sapUiSmallMarginTop" src="./img/email.png" press="handleemailPress" width="64px" height="64px"/>				
+														</VBox>														
+														<layoutData>
+															<layout:GridData span="XL12 L12 M12 S12"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>                                                
+											</layout:VerticalLayout>
+										</content>
+									</Page>
+									<Page id="idDetail_6_1" showHeader="true" showNavButton="{device>/isPhone}" class="sapUiStdPage">
+										<content>
+											<layout:VerticalLayout width="100%">
+												<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12">
+													<VBox>
+														<VBox alignContent="Start" alignItems="Start" justifyContent="Start">
+															<Label class="styleTextoVerde_25 sapUiMediumMarginTop sapUiSmallMarginBegin" text="COTIZAR"></Label>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+												</layout:Grid>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<Label text="Destinatario:" class="styleTextoNegro_15" required="false"></Label>
+															<ComboBox id="idDestinatario1" items="{ path: 'myParam>/listTblDestinatario1'}" placeholder="Seleccione una planta" width="100%"
+																required="true" value="" valueStateText="Se requiere seleccionar un tipo de orden." selectionChange="handleSelectionChangeDestinatario1">
+																<core:ListItem key="{myParam>CODIGO}" text="{myParam>DESCRIPCION}"/>
+															</ComboBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Start" justifyContent="Start">
+														<VBox width="100%">
+															<Label text="Planta:" class="styleTextoNegro_15" required="false"></Label>
+															<ComboBox id="idPlanta2" items="{ path: 'myParam>/listTblPlanta2'}" placeholder="Seleccione una planta" width="100%" required="true"
+																value="" valueStateText="Se requiere seleccionar un tipo de orden." selectionChange="handleSelectionChangePlanta2">
+																<core:ListItem key="{myParam>CODIGO}" text="{myParam>DESCRIPCION}"/>
+															</ComboBox>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid class="sapUiSmallMarginBegin sapUiSmallMarginEnd" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<VBox>
+														<HBox alignContent="Start" alignItems="Start" justifyContent="Start">
+															<CheckBox class="sapUiTinyMarginEnd" text="Cotizar código SCOP" valueState="None" select="onParentClickedCodScop"/>
+															<Input id="idInputCodCotizar" type="Text" value="" editable="true" width="90%" textAlign="Left" visible="false"/>
+															<Button id="idButtonIrCotizar" type="Emphasized" text="IR" icon="sap-icon://arrow-right" press="onPressIr" visible="false"/>
+														</HBox>
+														<layoutData>
+															<layout:GridData span="XL6 L6 M6 S6"/>
+														</layoutData>
+													</VBox>
+												</layout:Grid>
+												<layout:Grid containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%">
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%"></VBox>
+														<layoutData>
+															<layout:GridData span="XL2 L2 M2 S2"/>
+														</layoutData>
+													</HBox>
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%">
+															<tab:Table id="idTblCotizacion1" sort="sortDeliveryDate" rows="{ path: 'myParam>/listTblCotizacion1'}" visibleRowCount="7"
+																showNoData="No se hallaron Items." width="100%" visible="false">
+																<tab:noData>
+																	<Link class="sapUiMediumMargin" text="Ningún Item Encontrado."/>
+																</tab:noData>
+																<tab:columns>
+																	<tab:Column width="25%" hAlign="Center">
+																		<Text class="styleTextoVerde_13" text="Producto"/>
+																		<tab:template>
+																			<Label class="styleTextoPlomo_13" text="{myParam>PRODUCTO}" wrapping="true"/>
+																		</tab:template>
+																	</tab:Column>
+																	<tab:Column width="25%" hAlign="Center">
+																		<Text class="styleTextoVerde_13" text="Volumen (Galones)"/>
+																		<tab:template>
+																			<Input id="idTextVolumen1" type="Number" value="{myParam>VOLUMEN}" change="handleChangeVolumnen" editable="true" width="100%"
+																				textAlign="Center"/>
+																		</tab:template>
+																	</tab:Column>
+																</tab:columns>
+															</tab:Table>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL8 L8 M8 S8"/>
+														</layoutData>
+													</HBox>
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%"></VBox>
+														<layoutData>
+															<layout:GridData span="XL2 L2 M2 S2"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid id="idFooterTabla1Cotizar" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%" visible="false">
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%"></VBox>
+														<layoutData>
+															<layout:GridData span="XL2 L2 M2 S2"/>
+														</layoutData>
+													</HBox>
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%">
+															<Input class="sapUiSmallMarginEnd" type="Text" value="Importe total" editable="false" textAlign="Center"/>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%">
+															<Input id="idImporteTotal1" type="Text" value="0" editable="false" textAlign="Center"/>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL4 L4 M4 S4"/>
+														</layoutData>
+													</HBox>
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%"></VBox>
+														<layoutData>
+															<layout:GridData span="XL2 L2 M2 S2"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+												<layout:Grid id="idFooterTabla2Cotizar" containerQuery="true" defaultSpan="XL12 L12 M12 S12" width="100%" visible="false">
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%"></VBox>
+														<layoutData>
+															<layout:GridData span="XL2 L2 M2 S2"/>
+														</layoutData>
+													</HBox>
+													<HBox alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%" alignContent="Center" alignItems="Center" justifyContent="Center">
+															<MessageStrip text="Este importe total es válido solo para el 20/02/2021" type="Warning" showIcon="true"></MessageStrip>
+															<Button class="sapUiSmallMarginTop" id="idButtonGrabar1" type="Emphasized" text="Grabar" icon="sap-icon://save" press="onPressButtonGrabar1"
+																width="100%"/>
+														</VBox>
+														<layoutData>
+															<layout:GridData span="XL8 L8 M8 S8"/>
+														</layoutData>
+													</HBox>
+													<HBox class="sapUiSmallMarginTop" alignContent="Start" justifyContent="Start" width="100%">
+														<VBox width="100%"></VBox>
+														<layoutData>
+															<layout:GridData span="XL2 L2 M2 S2"/>
+														</layoutData>
+													</HBox>
+												</layout:Grid>
+											</layout:VerticalLayout>
+										</content>
+									</Page>                                                
+								</detailPages>
+							</SplitContainer>
+						</content>
+					</Toolbar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
